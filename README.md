@@ -42,7 +42,8 @@ Kai simbolių 1000 pasikartojo 9325 kartus. (poros1000.txt)
 konstitucija.txt užkoduoti užtruko 664 ms.    
 #### Hash'ų procentinio skirtingumo tyrimas   
 Atliekamas tyrimas buvo su failu panasu.txt. Jame yra 26 stringai, kurie skiriasi vienu simboliu. Visi hash'ai skiriasi tik 10 simbolių iš 64.  
-Skirtingumo procentas: 15%.
+Skirtingumo procentas: 15%.  
+Dariau šį tyrimą tik su 26 eilutėmis, todėl, kad ir taip aišku, kad didinant simbolių skaičių ar pan. skirtingumo procentas tik mažės. O padidinus iki 1000 simbolių skirtingumo gali išvis nelikti.  
 
 
 

@@ -38,6 +38,8 @@ Kai simbolių 10 pasikartojo 5 kartus. (poros1.txt)
 Kai simbolių 100 pasikartojo 9814 kartų. (poros100.txt)    
 Kai simbolių 500 pasikartojo 9414 kartų. (poros500.txt)    
 Kai simbolių 1000 pasikartojo 9325 kartus. (poros1000.txt)    
+#### Efektyvumo tyrimas   
+konstitucija.txt užkoduoti užtruko 767ms. (Tačiau labai daug pasikartojimų).  
 
 
 

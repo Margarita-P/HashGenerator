@@ -19,7 +19,7 @@ int values [62] = {11111, 22222, 33333, 44444, 55555, 66666, 77777, 88888, 99999
                    33567, 44678, 55789, 66891, 77912, 88821 };
 void input2 (string &input)
 {
-    ifstream fr ("duom.txt");
+    ifstream fr ("v.txt");
     fr >> input;
     fr.close();
 }
@@ -59,17 +59,34 @@ void HASH(string x, string &y)
         {
             if(array[i] == alphabet[j])
             {
-                k = 0;
-                k = values[j] * SizeOfInput;
-                k = k + (k * (SizeOfInput * (j + j + 1)));
-                if(k<0)
+                if(array[i] == array[i-1])
                 {
-                    k=-k;
+                    k = 0;
+                    k = values[j+i+i] * SizeOfInput;
+                    k = k + (k * (SizeOfInput * (j + j + 1)));
+                    if(k<0)
+                    {
+                        k=-k;
+                    }
+                    t = ' ';
+                    t = alphabet[j+1+i];
+                    y += to_string(k);
+                    y += t; 
                 }
-                t = ' ';
-                t = alphabet[j+1];
-                y += to_string(k);
-                y += t; 
+                else
+                {
+                    k = 0;
+                    k = values[j] * SizeOfInput;
+                    k = k + (k * (SizeOfInput * (j + j + 1)));
+                    if(k<0)
+                    {
+                        k=-k;
+                    }
+                    t = ' ';
+                    t = alphabet[j+1];
+                    y += to_string(k);
+                    y += t; 
+                }
             }
         }
     }
@@ -79,11 +96,15 @@ void HASH(string x, string &y)
         int k1 = values[SizeOfInput+i]*(SizeOfInput+i);
         k1 = k1 % 10;
         y += to_string(k1);
-        i++;
         if(i >= 52)
         {
             i=0;
         }
+        /*if(y.size() < 64)
+        {
+            y += alphabet[SizeOfInput+i+1];
+        }*/
+        i++;
     }
     
     while(y.size() >= 65)

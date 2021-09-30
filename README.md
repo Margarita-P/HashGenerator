@@ -30,6 +30,7 @@ Beje kadangi naudojamas long int kaip kintamasis, kuriame vis saugomos užkoduot
 Naudotas failas - empty.txt  
 output: 0262002628040880404606446588040886200941026200262901026200262804  
 #### Įrodymas, kad tai pačiai įeigai gaunama ta pati išeiga:  
+![image](https://user-images.githubusercontent.com/79039786/135496827-59a24594-8f53-49e3-99f6-33b704782fb5.png)
 
 
 

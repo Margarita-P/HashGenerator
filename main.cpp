@@ -2,24 +2,28 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <chrono>
 
 using namespace std;
 
-string alphabet [52] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+string alphabet [66] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
                         "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", 
                         "u", "v", "w", "x", "y", "z", "A", "B", "C", "D",
                         "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
                         "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
-                        "Y", "Z"};
-int values [52] = {11111, 22222, 33333, 44444, 55555, 66666, 77777, 88888, 99999, 11122,
+                        "Y", "Z", "ą", "č", "ę", "ė", "į", "š", "ų", "ū"
+                        "ž", ",", ".", "?", "!", ":"};
+int values [66] = {11111, 22222, 33333, 44444, 55555, 66666, 77777, 88888, 99999, 11122,
                    22233, 33344, 44455, 55566, 66677, 77788, 88899, 99110, 11333, 22444, 
                    33555, 44666, 55777, 66888, 77999, 88811,
                    11123, 22234, 33345, 44456, 55567, 66678, 77789, 88812, 99923, 11134,
                    22245, 33367, 44478, 55589, 66691, 77712, 88823, 99134, 11345, 22456, 
-                   33567, 44678, 55789, 66891, 77912, 88821 };
-string input3[10000];
-string comparing[10000];
-int yes = 10000;
+                   33567, 44678, 55789, 66891, 77912, 88821, 
+                   12323, 23434, 34545, 45656, 56767, 67878, 78989, 81212, 92323, 13434,
+                   24545, 36767, 47878, 58989};
+string input3[26];
+string comparing[26];
+int yes = 26;
 void compare()
 {
     int counter = 0;
@@ -43,7 +47,7 @@ void compare()
 }
 void input4 ()
 {
-    ifstream fd ("poros500.txt");
+    ifstream fd ("panasu2.txt");
     for(int i=0; i<yes; i++)
     {
         fd >> input3[i];
@@ -69,7 +73,6 @@ void HASH1()
         x.clear();
         y.clear();
         x = input3[iii];
-    
     vector <string> array;
     string temp;
     string t;
@@ -95,7 +98,7 @@ void HASH1()
     }
     for(int i = 0; i<array.size(); i++)
     {
-        for(int j=0; j<52; j++)
+        for(int j=0; j<66; j++)
         {
             if(array[i] == alphabet[j])
             {
@@ -142,13 +145,11 @@ void HASH1()
         }
         i++;
     }
-    
     while(y.size() >= 65)
     {
         y.erase(y.end()-1);
     }
     fr << y << endl;
-
     }
 }
 void HASH(string x, string &y)
@@ -179,7 +180,7 @@ void HASH(string x, string &y)
     }
     for(int i = 0; i<array.size(); i++)
     {
-        for(int j=0; j<52; j++)
+        for(int j=0; j<66; j++)
         {
             if(array[i] == alphabet[j])
             {
@@ -226,7 +227,6 @@ void HASH(string x, string &y)
         }
         i++;
     }
-    
     while(y.size() >= 65)
     {
         y.erase(y.end()-1);
@@ -234,6 +234,7 @@ void HASH(string x, string &y)
 }
 int main()
 {
+    setlocale(LC_ALL, "Lithuanian");
     string input;
     string answer;
     string output;
@@ -256,9 +257,10 @@ int main()
     else if(answer == "k")
     {
         input4();
+        auto start = chrono::steady_clock::now();
         HASH1();
-        compare();
-
+        cout << "hash funkcija uztruko: " << chrono::duration_cast<chrono::milliseconds>(chrono::steady_clock::now() - start).count() << " ms" << endl;
+        //compare();
     } 
     else
     {

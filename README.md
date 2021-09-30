@@ -28,7 +28,9 @@ Beje kadangi naudojamas long int kaip kintamasis, kuriame vis saugomos užkoduot
 ![image](https://user-images.githubusercontent.com/79039786/135495778-b1db23dc-ce46-4b05-9b6b-5b0a1a39a4ac.png)  
 #### Tuščias failas:  
 Naudotas failas - empty.txt  
-output: 0262002628040880404606446588040886200941026200262901026200262804
+output: 0262002628040880404606446588040886200941026200262901026200262804  
+#### Įrodymas, kad tai pačiai įeigai gaunama ta pati išeiga:  
+
 
 
 

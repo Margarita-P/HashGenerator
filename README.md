@@ -20,4 +20,8 @@ Hash funkcija sukurta.
   
 Beje kadangi naudojamas long int kaip kintamasis, kuriame vis saugomos užkoduotų raidžių reikšmės, pagrindinėje formulėje yra įdėtas fail safe, kuris neigiamą reikšmę paverčia teigiama (per didelę reikšmę gavęs integer grąžins "undefined value"). Taip gali nutikti tada, kai gaunama per didelė reikšmė. Pvz.: simbolių įeigoje yra 999  ir dauginama iš tam tikrai raidei priskirtos reikšmės, gaunama per didelė reikšmė long int'ui, todėl long int grąžintų neigiamą reikšmę (undefined value). Tuomet formulė dėl fail safe grąžina teigiamą reikšmę ir taip yra užtikrinama, kad išeiga būtų tik skaičiai ir raidės (be simbolių kaip "-").  
 ## Eksperimentinis tyrimas/ analizė  
+  
+#### 2 failai sudaryti tik iš vieno simbolio  
+#### 2 failai sudaryti iš daugiau nei tūkstančio simbolių  
+![image](https://user-images.githubusercontent.com/79039786/135495564-d4b465b7-f2c6-4112-9403-4140f549fd0a.png)
 

@@ -40,7 +40,9 @@ Kai simbolių 500 pasikartojo 9414 kartų. (poros500.txt)
 Kai simbolių 1000 pasikartojo 9325 kartus. (poros1000.txt)    
 #### Efektyvumo tyrimas   
 konstitucija.txt užkoduoti užtruko 664 ms.    
-
+#### Hash'ų procentinio skirtingumo tyrimas   
+Atliekamas tyrimas buvo su failu panasu.txt. Jame yra 26 stringai, kurie skiriasi vienu simboliu. Visi hash'ai skiriasi tik 10 simbolių iš 64.  
+Skirtingumo procentas: 15%.
 
 
 

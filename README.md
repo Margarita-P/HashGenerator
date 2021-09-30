@@ -22,6 +22,10 @@ Beje kadangi naudojamas long int kaip kintamasis, kuriame vis saugomos užkoduot
 ## Eksperimentinis tyrimas/ analizė  
   
 #### 2 failai sudaryti tik iš vieno simbolio  
-#### 2 failai sudaryti iš daugiau nei tūkstančio simbolių  
-![image](https://user-images.githubusercontent.com/79039786/135495564-d4b465b7-f2c6-4112-9403-4140f549fd0a.png)
+#### 2 failai sudaryti iš daugiau nei tūkstančio simbolių:
+![image](https://user-images.githubusercontent.com/79039786/135495564-d4b465b7-f2c6-4112-9403-4140f549fd0a.png)   
+#### 2 failai sudaryti iš daugiau nei tūkstančio simbolių, bei skiriasi tik vienu simboliu:  
+![image](https://user-images.githubusercontent.com/79039786/135495778-b1db23dc-ce46-4b05-9b6b-5b0a1a39a4ac.png)  
+
+
 
